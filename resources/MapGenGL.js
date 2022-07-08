@@ -17,7 +17,7 @@ const canvas = {
 	},
 	setTexture: function (target, src, x, y) {
 		var texture = new Image();
-		texture.src = `resources/textures/${src}.png`;
+		texture.src = `resources/textures/${src}.jpg`;
 		texture.width = cellWidth;
 		texture.height = cellWidth;
 		texturePreloadDiv.append(texture);
