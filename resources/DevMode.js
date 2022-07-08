@@ -3,14 +3,9 @@ const engine_singleTileMap = false;		// Forces render of the map with a single c
 const engine_singleTileMapTex = "land";	// Texture used by engine_singleTileMap
 const engine_useExperimental = false;	// Use experimental features (at your own risk)
 const debug_loggingLevel = 3;			// 0: Don't generate logs. 1: Generate basic logs. 2: Generate detailed logs. 3: Generate full logs.
-const ui_autoRender = false;				// Auto render on any setting update
+const ui_autoRender = true;				// Auto render on any setting update
 
 var DevModeEnabledFeatures = [];		// Don't touch
-
-//**//EXPERIMENTAL FEATURES//**//
-if (engine_useExperimental) {
-
-}
 
 //**//DEV TOOLS//**//
 var selectedCell;
