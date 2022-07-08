@@ -170,6 +170,8 @@ video {
 	margin: 0;
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
+	font-size: 3vmin;
+	padding: 2vmin;
 }
 #generator {	
 	border-top-right-radius: 0;
@@ -186,8 +188,10 @@ video {
 }
 
 #canvas {
-	width: 700px;
-	height: 700px;
+	/* width: 700px;
+	height: 700px; */
+	width: 100vmin;
+	height: 100vmin;
 	display: grid;
 	grid-template-rows: repeat(5, auto);
 	grid-template-columns: repeat(5, auto);
