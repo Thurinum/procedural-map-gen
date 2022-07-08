@@ -17,62 +17,72 @@
 	<div id="userPanel">
 		<h3>Map Size</h3>
 		<input id="number" type="number" value="256" />
-		<div style="display: none;"> <!-- temp hide unimplemented UI -->
-		<h3>Terrain Distribution</h3>
-		<label id="a1" for="a1">Land</label><input id="slider1" min="0" max="100" value="0" type="range"
-			name="a1" /><br /><br />
-		<label id="a2" for="a2">Water</label><input id="slider2" min="0" max="100" value="0" type="range"
-			name="a2" /><br /><br />
-		<label id="a3" for="a3">Coast T</label><input id="slider3" min="0" max="100" value="0" type="range"
-			name="a3" /><br /><br />
-		<label id="a4" for="a4">Coast B</label><input id="slider4" min="0" max="100" value="0" type="range"
-			name="a4" /><br /><br />
-		<label id="a5" for="a5">Coast L</label><input id="slider5" min="0" max="100" value="0" type="range"
-			name="a5" /><br /><br />
-		<label id="a6" for="a6">Coast R</label><input id="slider6" min="0" max="100" value="0" type="range"
-			name="a6" /><br /><br />
-		<label id="a7" for="a7">Coast TL1</label><input id="slider7" min="0" max="100" value="0" type="range"
-			name="a7" /><br /><br />
-		<label id="a8" for="a8">Coast TL2</label><input id="slider8" min="0" max="100" value="0" type="range"
-			name="a8" /><br /><br />
-		<label id="a9" for="a9">Coast TR1</label><input id="slider9" min="0" max="100" value="0" type="range"
-			name="a9" /><br /><br />
-		<label id="a10" for="a10">Coast TR2</label><input id="slider10" min="0" max="100" value="0" type="range"
-			name="a10" /><br /><br />
-		<label id="a11" for="a11">Coast BL1</label><input id="slider11" min="0" max="100" value="0" type="range"
-			name="a11" /><br /><br />
-		<label id="a12" for="a12">Coast BL2</label><input id="slider12" min="0" max="100" value="0" type="range"
-			name="a12" /><br /><br />
-		<label id="a13" for="a13">Coast BR1</label><input id="slider13" min="0" max="100" value="0" type="range"
-			name="a13" /><br /><br />
-		<label id="a14" for="a14">Coast BR2</label><input id="slider14" min="0" max="100" value="0" type="range"
-			name="a14" /><br /><br />
-		<label id="a15" for="a15">Coast D1</label><input id="slider15" min="0" max="100" value="0" type="range"
-			name="a15" /><br /><br />
-		<label id="a16" for="a16">Coast D2</label><input id="slider16" min="0" max="100" value="0" type="range"
-			name="a16" /><br /><br />
-		<label id="a17" for="a17">Coast D11</label><input id="slider17" min="0" max="100" value="0" type="range"
-			name="a17" /><br /><br />
-		<label id="a18" for="a18">Coast D21</label><input id="slider18" min="0" max="100" value="0" type="range"
-			name="a18" /><br /><br />
+
+		<div style="display: none;">
+			<!-- temp hide unimplemented UI -->
+			<h3>Terrain Distribution</h3>
+			<label id="a1" for="a1">Land</label><input id="slider1" min="0" max="100" value="0" type="range"
+				name="a1" /><br /><br />
+			<label id="a2" for="a2">Water</label><input id="slider2" min="0" max="100" value="0" type="range"
+				name="a2" /><br /><br />
+			<label id="a3" for="a3">Coast T</label><input id="slider3" min="0" max="100" value="0" type="range"
+				name="a3" /><br /><br />
+			<label id="a4" for="a4">Coast B</label><input id="slider4" min="0" max="100" value="0" type="range"
+				name="a4" /><br /><br />
+			<label id="a5" for="a5">Coast L</label><input id="slider5" min="0" max="100" value="0" type="range"
+				name="a5" /><br /><br />
+			<label id="a6" for="a6">Coast R</label><input id="slider6" min="0" max="100" value="0" type="range"
+				name="a6" /><br /><br />
+			<label id="a7" for="a7">Coast TL1</label><input id="slider7" min="0" max="100" value="0" type="range"
+				name="a7" /><br /><br />
+			<label id="a8" for="a8">Coast TL2</label><input id="slider8" min="0" max="100" value="0" type="range"
+				name="a8" /><br /><br />
+			<label id="a9" for="a9">Coast TR1</label><input id="slider9" min="0" max="100" value="0" type="range"
+				name="a9" /><br /><br />
+			<label id="a10" for="a10">Coast TR2</label><input id="slider10" min="0" max="100" value="0"
+				type="range" name="a10" /><br /><br />
+			<label id="a11" for="a11">Coast BL1</label><input id="slider11" min="0" max="100" value="0"
+				type="range" name="a11" /><br /><br />
+			<label id="a12" for="a12">Coast BL2</label><input id="slider12" min="0" max="100" value="0"
+				type="range" name="a12" /><br /><br />
+			<label id="a13" for="a13">Coast BR1</label><input id="slider13" min="0" max="100" value="0"
+				type="range" name="a13" /><br /><br />
+			<label id="a14" for="a14">Coast BR2</label><input id="slider14" min="0" max="100" value="0"
+				type="range" name="a14" /><br /><br />
+			<label id="a15" for="a15">Coast D1</label><input id="slider15" min="0" max="100" value="0"
+				type="range" name="a15" /><br /><br />
+			<label id="a16" for="a16">Coast D2</label><input id="slider16" min="0" max="100" value="0"
+				type="range" name="a16" /><br /><br />
+			<label id="a17" for="a17">Coast D11</label><input id="slider17" min="0" max="100" value="0"
+				type="range" name="a17" /><br /><br />
+			<label id="a18" for="a18">Coast D21</label><input id="slider18" min="0" max="100" value="0"
+				type="range" name="a18" /><br /><br />
 		</div>
 
 		<h3>Canvas Resolution</h3>
-		<label for="quality">Low</label>
-		<input id="quality" min="1" max="64" value="64" step="4" type="range" />
-		<label for="quality">High</label>
-		<br /><br />
+		<label for="quality" class="sliderWrapper">
+			Low
+			<input id="quality" min="1" max="64" value="64" step="4" type="range" />
+			High
+		</label>
 
 		<h3>Other Settings</h3>
-		<input id="usePerspective" type="checkbox" checked="true" />
-		<label for="usePerspective">Use orthogonal perspective</label>
-		<br /><br />
+		<label for="usePerspective">
+			Use orthogonal perspective
+			<input id="usePerspective" type="checkbox" checked="true" />
+		</label>
 
+		<hr />
+
+		<!-- <div class="btnGroup">
+			<button id="load">Load Map</button>
+			<button id="save">Save Map</button>
+		</div> -->
+	</div>
+	
+	<div id="menubtns-wrapper">
 		<button id="generator">Generate Map</button>
-		<button id="load">Load Map</button>
-		<button id="save">Save Map</button>
-
-		<br /><br /><br />
+		<button id="menu-toggle"></button>
 	</div>
 
 	<!-- VERSION NUMBER -->
