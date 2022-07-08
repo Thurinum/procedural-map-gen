@@ -3,13 +3,13 @@ const engine_singleTileMap = false;		// Forces render of the map with a single c
 const engine_singleTileMapTex = "land";	// Texture used by engine_singleTileMap
 const engine_useExperimental = false;	// Use experimental features (at your own risk)
 const debug_loggingLevel = 3;			// 0: Don't generate logs. 1: Generate basic logs. 2: Generate detailed logs. 3: Generate full logs.
-const ui_autoRender = true;				// Auto render on any setting update
+const ui_autoRender = false;				// Auto render on any setting update
 
 var DevModeEnabledFeatures = [];		// Don't touch
 
 //**//EXPERIMENTAL FEATURES//**//
 if (engine_useExperimental) {
-	
+
 }
 
 //**//DEV TOOLS//**//
@@ -107,11 +107,11 @@ function debug_newLogEntry(value, minimum, type, tooltip) {
 	}
 }
 
-window.onerror = function() {
+window.onerror = function () {
 	debug_newLogEntry(`Script error detected, see console for details.`, 1, 2);
 };
 
-window.onkeypress = function(e) {
+window.onkeypress = function (e) {
 	if (e.keyCode === 32) {
 		debug_generateLogs(false);
 	} else if (e.keyCode === 13) {
@@ -121,26 +121,26 @@ window.onkeypress = function(e) {
 
 //Auto-mode
 if (ui_autoRender) {
-	document.getElementById("quality").oninput = function() {
+	document.getElementById("quality").oninput = function () {
 		var size = document.getElementById("number").value;
 		engine_renderWorld(size);
 	}
-	document.getElementById("number").oninput = function() {
-		var size = document.getElementById("number").value;
-		engine_renderWorld(size);
-	}
-
-	document.getElementById("usePerspective").oninput = function() {
+	document.getElementById("number").oninput = function () {
 		var size = document.getElementById("number").value;
 		engine_renderWorld(size);
 	}
 
-	document.getElementById("generator").addEventListener("click", function() {
+	document.getElementById("usePerspective").oninput = function () {
+		var size = document.getElementById("number").value;
+		engine_renderWorld(size);
+	}
+
+	document.getElementById("generator").addEventListener("click", function () {
 		var size = document.getElementById("number").value;
 		engine_renderWorld(size);
 	});
 
-	window.onload = function() {
+	window.onload = function () {
 		var size = document.getElementById("number").value;
 		engine_renderWorld(size);
 	}

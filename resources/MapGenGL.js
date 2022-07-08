@@ -12,10 +12,10 @@ var texturePreloadDiv = document.getElementById("texturesPreload");
 
 //**//CANVAS FUNCTIONS//**//
 const canvas = {
-	clear: function(target) {
+	clear: function (target) {
 		target.getContext("2d").clearRect(0, 0, target.width, target.height);
 	},
-	setTexture: function(target, src, x, y) {
+	setTexture: function (target, src, x, y) {
 		var texture = new Image();
 		texture.src = `resources/textures/${src}.png`;
 		texture.width = cellWidth;

@@ -367,7 +367,7 @@ function createNewTile() {
 		}
 	} else {
 		if (debug_showExtendedLogs) {
-			console.info(`[Info] Detecting suitable textures for tile #${	generatedCells + 1}`);
+			console.info(`[Info] Detecting suitable textures for tile #${generatedCells + 1}`);
 		}
 		texture = matchTextures();
 	}
@@ -439,7 +439,7 @@ function createNewTile() {
 		case "textextexvoid":
 			gen_createReferenceTile(parseInt(tileReference.right.id.slice(4)))
 			break;
-		
+
 		//First cell is 4
 		case "voidvoidvoidtex":
 			gen_createReferenceTile(parseInt(tileReference.left.id.slice(4)))
@@ -455,7 +455,7 @@ function createNewTile() {
 		case "voidtextexvoid":
 			gen_createReferenceTile(parseInt(tileReference.top.id.slice(4)))
 			break;
-		
+
 		//First cell is 21
 		case "voidnullnullvoid":
 			gen_createReferenceTile(parseInt(tileReference.top.id.slice(4)))
@@ -482,18 +482,18 @@ function createNewTile() {
 		default:
 			console.warn(`[Warning] Unknown textures categories combination "${tileReference.getAdjacentTexturesCategories()}"`);
 			break;
-		}
+	}
 
-		generatedCells++;
+	generatedCells++;
 
-		console.info(`[Info] Applied texture "${texture}" to tile #${oldTileReference.id}\n       Next target is tile #${tileReference.id}`);
-		if (debug_showExtendedLogs) {
-			console.info(`[Info] Total rendered cells: ${generatedCells}`);
-		}
+	console.info(`[Info] Applied texture "${texture}" to tile #${oldTileReference.id}\n       Next target is tile #${tileReference.id}`);
+	if (debug_showExtendedLogs) {
+		console.info(`[Info] Total rendered cells: ${generatedCells}`);
+	}
 }
 
 //**//START MAP GENERATION EVENT//**//
-document.getElementById("generator").addEventListener("click", function() {
+document.getElementById("generator").addEventListener("click", function () {
 	var size = document.getElementById("number").value;
 	texDistribution = parseInt(document.getElementById("slider").value);
 	generateWorld(size);

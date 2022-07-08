@@ -95,7 +95,7 @@ function engine_renderWorld(size) {
 
 	//Set canvas resolution
 	drawOverlay.width = quality * 32;
-	drawOverlay.height = quality * 32; 
+	drawOverlay.height = quality * 32;
 
 	positionMultiplier = drawOverlay.width / grid.offsetWidth;
 
@@ -456,7 +456,7 @@ function createNewTile() {
 		case "textextexvoid":
 			gen_createReferenceTile(parseInt(tileReference.right.id.slice(4)))
 			break;
-		
+
 		//First cell is 4
 		case "voidvoidvoidtex":
 			gen_createReferenceTile(parseInt(tileReference.left.id.slice(4)))
@@ -472,7 +472,7 @@ function createNewTile() {
 		case "voidtextexvoid":
 			gen_createReferenceTile(parseInt(tileReference.top.id.slice(4)))
 			break;
-		
+
 		//First cell is 21
 		case "voidnullnullvoid":
 			gen_createReferenceTile(parseInt(tileReference.top.id.slice(4)))
@@ -499,15 +499,15 @@ function createNewTile() {
 		default:
 			debug_newLogEntry(`Unknown textures categories combination "${tileReference.getAdjacentTexturesCategories()}"`, 1, 1);
 			break;
-		}
+	}
 
-		generatedCells++;
+	generatedCells++;
 
-		debug_newLogEntry(`Applied texture "${texture}" to cell #${oldTileReference.id}`, 2, 0);
-		if (gridSize - generatedCells === 0) {
-			debug_newLogEntry(`Next target: cell #${tileReference.id}`, 3, 0);
-			debug_newLogEntry(`Tiles to render left: ${gridSize - generatedCells}`, 2, 0);
-		} else {
-			debug_newLogEntry(`No cells left to render.`, 2, 0);
-		}
+	debug_newLogEntry(`Applied texture "${texture}" to cell #${oldTileReference.id}`, 2, 0);
+	if (gridSize - generatedCells === 0) {
+		debug_newLogEntry(`Next target: cell #${tileReference.id}`, 3, 0);
+		debug_newLogEntry(`Tiles to render left: ${gridSize - generatedCells}`, 2, 0);
+	} else {
+		debug_newLogEntry(`No cells left to render.`, 2, 0);
+	}
 }

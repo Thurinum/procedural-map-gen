@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
 	background-color: black;
 	color: white;
 	margin: 5px;
@@ -38,9 +39,11 @@ video {
 	width: 100%;
 	height: 100%;
 }
+
 #texturesPreload {
 	display: none;
 }
+
 #version {
 	position: fixed;
 	bottom: 0;
@@ -82,23 +85,26 @@ button {
 	padding: 10px;
 	transition: background 0.1s linear, transform 0.1s ease-out;
 }
+
 button:hover {
 	background-color: #DDD;
 }
+
 button:active {
 	transform: scale(0.9);
 	color: black;
 }
 
 details {
-    display: inline;
-    color: #6a73a2;
+	display: inline;
+	color: #6a73a2;
 }
 
 select {
 	border: ridge 2px white;
 	width: 100px;
 }
+
 select:hover {
 	background-color: white;
 }
@@ -121,6 +127,7 @@ select:hover {
 	font-size: 1em;
 	transition: font-size 0.5s linear;
 }
+
 #a2 {
 	font-size: 1em;
 	transition: font-size 0.5s linear;
