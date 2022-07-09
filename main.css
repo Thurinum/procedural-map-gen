@@ -5,6 +5,22 @@ body {
 	margin: 5px;
 	padding: 0;
 	overflow: auto;
+	
+}
+
+h3, label {
+	font-family: monospace;
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 3em;
+}
+
+input[type=checkbox] {
+	transform: scale(2);
+	position: relative;
+	bottom: 5px;
 }
 
 img {
@@ -22,10 +38,12 @@ span {
 
 button {
 	padding: 10px;
-	border: solid 4px #0060df;
-	border-radius: 10px;
+	border: solid 8px #0060df;
+	border-radius: 15px;
 	color: white;
+	font-family: monospace;
 	margin: 10px;
+	box-shadow: 0 0 10px black;
 	background-color: #0060df;
 	transition: background 0.1s linear, transform 0.1s ease-out;
 }
@@ -121,12 +139,12 @@ video {
 }
 
 #userPanel {
-	width: 95%;
+	width: 96%;
 	height: 96%;
 
 	padding: 2%;
 	position: fixed;
-	bottom: -100vh;
+	bottom: -102%;
 	left: 0;
 	font-size: 15px;
 	font-family: sans-serif;
@@ -161,7 +179,7 @@ video {
 	bottom: 0;
 	left: 50%;
 	transform: translate(-50%, 0);
-	z-index: 4;
+	z-index: 5;
 
 	display: flex;
 	flex-direction: row;
@@ -173,8 +191,22 @@ video {
 	font-size: 3vmin;
 	padding: 2vmin;
 }
+#menu-toggle {
+	z-index: 4;
+}
 #generator {	
 	border-top-right-radius: 0;
+}
+
+#background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	object-fit: cover;
+	filter: blur(50px);
 }
 
 #menu-toggle {
@@ -199,6 +231,20 @@ video {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	filter: drop-shadow(-20px 20px 10px #0d0d0d);
+	animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+	0% {
+		top: 50%;
+	}
+	50% {
+		top: 47%;
+	}
+	100% {
+		top: 50%;
+	}
 }
 
 .sliderWrapper {

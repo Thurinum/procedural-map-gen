@@ -140,6 +140,11 @@ if (ui_autoRender) {
 		e.currentTarget.classList.toggle("toggled");
 	}
 
+	let doAnim = document.querySelector("#useFloatingAnim");
+	doAnim.onchange = (e) => {
+		document.querySelector("#canvas").style.animation = doAnim.checked ? "float 3s ease-in-out infinite" : "none";
+	}
+	
 	window.onload = function () {
 		var size = Math.pow(document.getElementById("number").value, 2);
 		engine_renderWorld(size);
