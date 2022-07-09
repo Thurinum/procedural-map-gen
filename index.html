@@ -25,42 +25,62 @@
 		<label>16x16 = 256</label>
 
 		<h3>Terrain Distribution</h3>
-		<label for="slider1">
-			<input id="slider1" type="number" min="0" max="100" value="5.55" step=".01" /> Land</label>
-		<label for="slider2">
-			<input id="slider2" type="number" min="0" max="100" value="5.55" step=".01" /> Water</label>
-		<label for="slider3">
-			<input id="slider3" type="number" min="0" max="100" value="5.55" step=".01" /> Coast (top)</label>
-		<label for="slider4">
-			<input id="slider4" type="number" min="0" max="100" value="5.55" step=".01" /> Coast (bottom)</label>
-		<label for="slider5">
-			<input id="slider5" type="number" min="0" max="100" value="5.55" step=".01" /> Coast (left)</label>
-		<label for="slider6">
-			<input id="slider6" type="number" min="0" max="100" value="5.55" step=".01" /> Coast (right)</label>
-		<label for="slider7">
-			<input id="slider7" type="number" min="0" max="100" value="5.55" step=".01" /> Coast (top left 1)</label>
-		<label for="slider8">
-			<input id="slider8" type="number" min="0" max="100" value="5.55" step=".01" /> Coast (top left 2)</label>
-		<label for="slider9">
-			<input id="slider9" type="number" min="0" max="100" value="5.55" step=".01" /> Coast (top right 1)</label>
-		<label for="slider10">
-			<input id="slider10" type="number" min="0" max="100" value="5.55" step=".01" /> Coast (top right 2)</label>
-		<label for="slider11">
-			<input id="slider11" type="number" min="0" max="100" value="5.55" step=".01" /> Coast (bottom left 1)</label>
-		<label for="slider12">
-			<input id="slider12" type="number" min="0" max="100" value="5.55" step=".01" /> Coast (bottom left 2)</label>
-		<label for="slider13">
-			<input id="slider13" type="number" min="0" max="100" value="5.55" step=".01" /> Coast (bottom right 1)</label>
-		<label for="slider14">
-			<input id="slider14" type="number" min="0" max="100" value="5.55" step=".01" /> Coast (bottom right 2)</label>
-		<label for="slider15">
-			<input id="slider15" type="number" min="0" max="100" value="5.55" step=".01" /> Coast (diagonal 1)</label>
-		<label for="slider16">
-			<input id="slider16" type="number" min="0" max="100" value="5.55" step=".01" /> Coast (diagonal 2)</label>
-		<label for="slider17">
-			<input id="slider17" type="number" min="0" max="100" value="5.55" step=".01" /> Coast (diagonal 11)</label>
-		<label for="slider18">
-			<input id="slider18" type="number" min="0" max="100" value="5.55" step=".01" /> Coast (diagonal 21)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" />
+			Land</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" />
+			Water</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(top)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(bottom)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(left)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(right)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(top left 1)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(top left 2)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(top right 1)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(top right 2)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(bottom left 1)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(bottom left 2)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(bottom right 1)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(bottom right 2)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(diagonal 1)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(diagonal 2)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(diagonal 11)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(diagonal 21)</label>
+
+		<p id="probabilities-validation"></p>
 
 		<h3>Canvas Resolution</h3>
 		<label for="quality" class="sliderWrapper">
@@ -73,16 +93,16 @@
 		<label for="usePerspective">
 			<input id="usePerspective" type="checkbox" checked="true" />
 			Use orthogonal perspective
-		</label>
+			</label>
 
-		<label for="useFloatingAnim">
-			<input id="useFloatingAnim" type="checkbox" checked="true" />
-			Use floating animation
-		</label>
+			<label for="useFloatingAnim">
+				<input id="useFloatingAnim" type="checkbox" checked="true" />
+				Use floating animation
+				</label>
 
-		<hr />
+				<hr />
 
-		<!-- <div class="btnGroup">
+				<!-- <div class="btnGroup">
 			<button id="load">Load Map</button>
 			<button id="save">Save Map</button>
 		</div> -->

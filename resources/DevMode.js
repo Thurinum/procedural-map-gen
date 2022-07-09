@@ -153,15 +153,40 @@ if (ui_autoRender) {
 	DevModeEnabledFeatures.push(` Auto Render`);
 }
 
+function validateProbabilities() {
+	let probabilities = probabilitiesSet;
+	var sum = 0;
+	for (var i = 0; i < probabilities.length; i++) {
+		if (probabilities[i][0] === 0) {
+			debug_newLogEntry(`Probabilities null for '${probabilities[i][1]}', texture will not be used.`, 1, 1);
+		}
+		sum += probabilities[i][0];
+	}
+	
+	if (sum !== 100) {
+		if (sum >= 99 && sum <= 101) {
+			debug_newLogEntry(`Unaccurate textures probabilities sum with an error margin of ${100 - sum}%.`, 1, 1);
+		} else {
+			debug_newLogEntry(`Invalid textures probabilities sum of ${sum}% (must be ~100).`, 1, 3);
+			document.querySelector("#probabilities-validation").innerText = "Invalid probabilities sum " + sum + ". Must be ~100.";
+			return false;
+		}
+	}
+
+	document.querySelector("#probabilities-validation").innerText = "Looks good.";
+}
+
 // //Enable probabilities sliders
-for (let i = 0; i < 18; i++) {
-	let slider = document.getElementById(`slider${i + 1}`);
+let sliders = document.querySelectorAll(`.probability-slider`);
+for (let i = 0; i < sliders.length; i++) {
+	let slider = sliders[i];
 	probabilitiesSet[i][0] = parseFloat(slider.value);
 
 	slider.addEventListener("input", function(e) {
 		probabilitiesSet[i][0] = parseFloat(e.target.value);
-		var size = Math.pow(document.getElementById("number").value, 2);
-		engine_renderWorld(size);
+		//var size = Math.pow(document.getElementById("number").value, 2);
+		validateProbabilities();
+		//engine_renderWorld(size);
 	});
 };
 

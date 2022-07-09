@@ -51,22 +51,7 @@ function engine_renderWorld(size) {
 	];
 	
 	//Validate texture probabilities
-	var sum = 0;
-	for (var i = 0; i < probabilities.length; i++) {
-		if (probabilities[i][0] === 0) {
-			debug_newLogEntry(`Probabilities null for '${probabilities[i][1]}', texture will not be used.`, 1, 1);
-		}
-		sum += probabilities[i][0];
-	}
-	
-	if (sum !== 100) {
-		if (sum >= 99 && sum <= 101) {
-			debug_newLogEntry(`Unaccurate textures probabilities sum with an error margin of ${100 - sum}%.`, 1, 1);
-		} else {
-			debug_newLogEntry(`Invalid textures probabilities sum of ${sum}% (must be ~100).`, 1, 3);
-			return false;
-		}
-	}
+	validateProbabilities();
 
 	//Sort probabilities from lowest to highest
 	probabilities.sort();
