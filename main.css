@@ -93,6 +93,16 @@ video {
 	z-index: 1;
 }
 
+#loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	font-size: 100px;
+	font-family: monospace;
+	z-index: -1;
+	transform: translate(-50%, -50%);
+}
+
 .cell {
 	background-size: 100% 100%;
 	transition: box-shadow 0.1s linear, border-radius 0.1s linear;
@@ -204,7 +214,7 @@ video {
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	z-index: -1;
+	z-index: 0;
 	object-fit: cover;
 	filter: blur(50px);
 }
