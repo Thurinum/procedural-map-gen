@@ -15,8 +15,9 @@
 
 	<!-- USER FEATURES -->
 	<div id="userPanel">
-		<h3>Map Size (square number)</h3>
-		<input id="number" type="number" value="256" />
+		<h3>Map Size</h3>
+		<input id="number" type="range" min="0" value="16" max="128" onchange="this.nextElementSibling.innerText = `${this.value}x${this.value} = ${Math.pow(this.value, 2)}`" />
+		<label>16x16 = 256</label>
 
 		<div style="display: none;">
 			<!-- temp hide unimplemented UI -->

@@ -117,26 +117,31 @@ window.onkeypress = function (e) {
 //Auto-mode
 if (ui_autoRender) {
 	document.getElementById("quality").oninput = function () {
-		var size = document.getElementById("number").value;
+		var size = Math.pow(document.getElementById("number").value, 2);
 		engine_renderWorld(size);
 	}
-	document.getElementById("number").oninput = function () {
-		var size = document.getElementById("number").value;
+	document.getElementById("number").addEventListener("input", function() {
+		var size = Math.pow(document.getElementById("number").value, 2);
 		engine_renderWorld(size);
-	}
+	});
 
 	document.getElementById("usePerspective").oninput = function () {
-		var size = document.getElementById("number").value;
+		var size = Math.pow(document.getElementById("number").value, 2);
 		engine_renderWorld(size);
 	}
 
 	document.getElementById("generator").addEventListener("click", function () {
-		var size = document.getElementById("number").value;
+		var size = Math.pow(document.getElementById("number").value, 2);
 		engine_renderWorld(size);
 	});
 
+	document.querySelector("#menu-toggle").onclick = (e) => {
+		document.querySelector("#userPanel").classList.toggle("visible");
+		e.currentTarget.classList.toggle("toggled");
+	}
+
 	window.onload = function () {
-		var size = document.getElementById("number").value;
+		var size = Math.pow(document.getElementById("number").value, 2);
 		engine_renderWorld(size);
 	}
 
