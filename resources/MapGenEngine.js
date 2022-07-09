@@ -46,6 +46,10 @@ function engine_renderWorld(size) {
 		return false;
 	}
 
+	let probabilities = [
+		...probabilitiesSet
+	];
+	
 	//Validate texture probabilities
 	var sum = 0;
 	for (var i = 0; i < probabilities.length; i++) {
@@ -54,7 +58,7 @@ function engine_renderWorld(size) {
 		}
 		sum += probabilities[i][0];
 	}
-
+	
 	if (sum !== 100) {
 		if (sum >= 99 && sum <= 101) {
 			debug_newLogEntry(`Unaccurate textures probabilities sum with an error margin of ${100 - sum}%.`, 1, 1);
@@ -350,6 +354,10 @@ function randomTexture(textures) {
 	var done = false;
 	var loopVar = 0;
 	var output;
+
+	let probabilities = [
+		...probabilitiesSet
+	].sort();
 
 	while (!done) {
 		var random = Math.random();

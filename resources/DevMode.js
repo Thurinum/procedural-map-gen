@@ -154,19 +154,16 @@ if (ui_autoRender) {
 }
 
 // //Enable probabilities sliders
-// for (let i = 0; i < 18; i++) {
-// 	var slider = document.getElementById("slider" + (i + 1));
-// 	slider.addEventListener("input", function(e) {
-// 		sliders(i, e);
-// 	});
-// };
+for (let i = 0; i < 18; i++) {
+	let slider = document.getElementById(`slider${i + 1}`);
+	probabilitiesSet[i][0] = parseFloat(slider.value);
 
-// function sliders(n, event) {
-// 	probabilities[n][0] = parseInt(event.target.value);
-// 	console.log(probabilities)
-// 	var size = document.getElementById("number").value;
-// 	engine_renderWorld(size);
-// }
+	slider.addEventListener("input", function(e) {
+		probabilitiesSet[i][0] = parseFloat(e.target.value);
+		var size = Math.pow(document.getElementById("number").value, 2);
+		engine_renderWorld(size);
+	});
+};
 
 if (DevModeEnabledFeatures.length > 0) {
 	console.info(`[DevMode] The following Dev Mode features are enabled:\n\n${DevModeEnabledFeatures}`);
