@@ -23,13 +23,6 @@ var usePerspective;			// Use axonometric perpective
 var drawOverlay = document.getElementById("canvas");	// Canvas for drawing
 var positionMultiplier = 1;	// Fixes texture position for current quality
 
-// TODO MOVE to sep file
-document.querySelector("#generator").onclick = () => engine_renderWorld(document.querySelector("#number").value);
-
-document.querySelector("#menu-toggle").onclick = (e) => {
-	document.querySelector("#userPanel").classList.toggle("visible");
-	e.currentTarget.classList.toggle("toggled");
-}
 
 //**//GENERATE WORLD//**//
 //Note: size argument MUST be a square number!!! (16,25,144,etc.)

@@ -15,8 +15,9 @@
 
 	<!-- USER FEATURES -->
 	<div id="userPanel">
-		<h3>Map Size (square number)</h3>
-		<input id="number" type="number" value="256" />
+		<h3>Map Size</h3>
+		<input id="number" type="range" min="0" value="16" max="128" onchange="this.nextElementSibling.innerText = `${this.value}x${this.value} = ${Math.pow(this.value, 2)}`" />
+		<label>16x16 = 256</label>
 
 		<div style="display: none;">
 			<!-- temp hide unimplemented UI -->
@@ -62,14 +63,19 @@
 		<h3>Canvas Resolution</h3>
 		<label for="quality" class="sliderWrapper">
 			Low
-			<input id="quality" min="1" max="64" value="64" step="4" type="range" />
+			<input id="quality" min="1" max="64" value="64" type="range" />
 			High
 		</label>
 
 		<h3>Other Settings</h3>
 		<label for="usePerspective">
-			Use orthogonal perspective
 			<input id="usePerspective" type="checkbox" checked="true" />
+			Use orthogonal perspective
+		</label>
+
+		<label for="useFloatingAnim">
+			<input id="useFloatingAnim" type="checkbox" checked="true" />
+			Use floating animation
 		</label>
 
 		<hr />
@@ -109,6 +115,8 @@
 		<img src="resources/textures/coastD11.jpg" />
 		<img src="resources/textures/coastD21.jpg" />
 	</div>
+
+	<video id="background" autoplay src="resources/video/background.mp4"></video>
 
 	<!-- SCRIPTS -->
 	<script type="text/javascript" src="resources/MapGenResources.js"></script>
