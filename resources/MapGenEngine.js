@@ -87,7 +87,7 @@ function engine_renderWorld(size) {
 	drawOverlay.width = quality * 32;
 	drawOverlay.height = quality * 32;
 
-	positionMultiplier = drawOverlay.width / grid.offsetWidth;
+	positionMultiplier = Math.round(drawOverlay.width / grid.offsetWidth) - 0.1; // todo remove magic number
 
 	//Use perpective if enabled
 	if (usePerspective) {
@@ -265,7 +265,7 @@ function gen_createReferenceTile(id) {
 				var a = tileReference.master.offsetLeft * positionMultiplier;
 				var b = tileReference.master.offsetTop * positionMultiplier;
 				//canvas.clear(tileReference.master);
-				canvas.setTexture(drawOverlay, src, a, b)
+				canvas.setTexture(drawOverlay, src, Math.round(a), Math.round(b))
 				tileReference.master.textureInfo = src;
 
 				debug_newLogEntry(`Applying texture '${src}.png':\n    X offset: ~${a.toFixed(2)} px\n    Y offset: ~${b.toFixed(2)} px`, 3, 0);
