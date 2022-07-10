@@ -177,18 +177,18 @@ function validateProbabilities() {
 }
 
 // //Enable probabilities sliders
-let sliders = document.querySelectorAll(`.probability-slider`);
-for (let i = 0; i < sliders.length; i++) {
-	let slider = sliders[i];
-	probabilitiesSet[i][0] = parseFloat(slider.value);
+// let sliders = document.querySelectorAll(`.probability-slider`);
+// for (let i = 0; i < sliders.length; i++) {
+// 	let slider = sliders[i];
+// 	probabilitiesSet[i][0] = parseFloat(slider.value);
 
-	slider.addEventListener("input", function(e) {
-		probabilitiesSet[i][0] = parseFloat(e.target.value);
-		//var size = Math.pow(document.getElementById("number").value, 2);
-		validateProbabilities();
-		//engine_renderWorld(size);
-	});
-};
+// 	slider.addEventListener("input", function(e) {
+// 		probabilitiesSet[i][0] = parseFloat(e.target.value);
+// 		//var size = Math.pow(document.getElementById("number").value, 2);
+// 		validateProbabilities();
+// 		//engine_renderWorld(size);
+// 	});
+// };
 
 if (DevModeEnabledFeatures.length > 0) {
 	console.info(`[DevMode] The following Dev Mode features are enabled:\n\n${DevModeEnabledFeatures}`);
