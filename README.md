@@ -8,16 +8,5 @@ Only bugfixes and visual enhancements were applied, so the core code is still qu
 
 ## Features
 - Generate square tiled maps with randomized matching terrain textures
-<<<<<<< HEAD
 - Adjust a few display options
-
-### TODO (in my spare time, perchance, one day maybe?):
-- Add option to download map (very easy, quick)
-- Complete the half-implemented water/land proportions control (easy, somewhat long)
-- Add sand texture (easy, long)
-- Add navigation controls and 3D rotation (medium, long?)
-- Add flora, buildings, etc. on top of the generated tiles (ambitious, Peter Molyneux)
-- Optimize the code (nightmare, an eternity of sufferance)
-=======
-- Adjust a few display options
->>>>>>> unstable
+- Download the map
