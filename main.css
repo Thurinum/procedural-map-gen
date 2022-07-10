@@ -121,9 +121,10 @@ video {
 
 #version {
 	position: fixed;
-	bottom: 0;
+	top: 0;
 	right: 0;
 	font-family: sans-serif;
+	margin-top: 0;
 	padding: 10px;
 }
 
