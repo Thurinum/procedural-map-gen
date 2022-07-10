@@ -15,7 +15,7 @@
 
 	<!-- MAP GRID -->
 	<div id="grid"></div>
-	<canvas width="4096" height="4096" id="canvas"></canvas>
+	<canvas id="canvas" width="4096" height="4096" id="canvas"></canvas>
 
 	<!-- USER FEATURES -->
 	<div id="userPanel">
@@ -93,16 +93,21 @@
 		<label for="usePerspective">
 			<input id="usePerspective" type="checkbox" checked="true" />
 			Use orthogonal perspective
-			</label>
+		</label>
 
-			<label for="useFloatingAnim">
-				<input id="useFloatingAnim" type="checkbox" checked="true" />
-				Use floating animation
-				</label>
+		<label for="useFloatingAnim">
+			<input id="useFloatingAnim" type="checkbox" checked="true" />
+			Use floating animation
+		</label>
 
-				<hr />
+		<label for="useHighQualityDownload">
+			<input id="useHighQualityDownload" type="checkbox" checked="true" />
+			Use high-quality download
+		</label>
 
-				<!-- <div class="btnGroup">
+		<hr />
+
+		<!-- <div class="btnGroup">
 			<button id="load">Load Map</button>
 			<button id="save">Save Map</button>
 		</div> -->
@@ -112,6 +117,8 @@
 		<button id="generator">Generate Map</button>
 		<button id="menu-toggle"></button>
 	</div>
+
+	<button id="download-btn">⤓</button>
 
 	<!-- VERSION NUMBER -->
 	<p id="version">Version unavailable</p>

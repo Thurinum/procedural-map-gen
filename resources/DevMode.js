@@ -176,6 +176,10 @@ function validateProbabilities() {
 	//document.querySelector("#probabilities-validation").innerText = "Looks good.";
 }
 
+document.querySelector("#download-btn").onclick = () => {
+	canvas.download(document.querySelector("#useHighQualityDownload").checked);
+}
+
 // //Enable probabilities sliders
 // let sliders = document.querySelectorAll(`.probability-slider`);
 // for (let i = 0; i < sliders.length; i++) {

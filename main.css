@@ -5,10 +5,11 @@ body {
 	margin: 5px;
 	padding: 0;
 	overflow: auto;
-	
+
 }
 
-h3, label {
+h3,
+label {
 	font-family: monospace;
 	font-size: 2em;
 }
@@ -119,6 +120,12 @@ video {
 	display: none;
 }
 
+#download-btn {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
 #version {
 	position: fixed;
 	top: 0;
@@ -195,6 +202,7 @@ video {
 	display: flex;
 	flex-direction: row;
 }
+
 #menubtns-wrapper button {
 	margin: 0;
 	border-bottom-left-radius: 0;
@@ -202,10 +210,12 @@ video {
 	font-size: 3vmin;
 	padding: 2vmin;
 }
+
 #menu-toggle {
 	z-index: 4;
 }
-#generator {	
+
+#generator {
 	border-top-right-radius: 0;
 }
 
@@ -223,9 +233,11 @@ video {
 #menu-toggle {
 	border-top-left-radius: 0;
 }
+
 #menu-toggle::after {
 	content: "▲";
 }
+
 #menu-toggle.toggled::after {
 	content: "▼";
 }
@@ -250,9 +262,11 @@ video {
 	0% {
 		top: 50%;
 	}
+
 	50% {
 		top: 47%;
 	}
+
 	100% {
 		top: 50%;
 	}
