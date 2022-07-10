@@ -173,7 +173,7 @@ function validateProbabilities() {
 		}
 	}
 
-	document.querySelector("#probabilities-validation").innerText = "Looks good.";
+	//document.querySelector("#probabilities-validation").innerText = "Looks good.";
 }
 
 // //Enable probabilities sliders

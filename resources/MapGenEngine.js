@@ -1,7 +1,7 @@
 "use strict";
 
 //**//VERSION//**//
-const versionx = "0.9.x";
+const versionx = "v1.0";
 
 //Greeting message
 console.info(`[Welcome] Tile Map Generator - ${versionx}`);
