@@ -1,5 +1,5 @@
 # Procedural Tiled Map Generator
-A simple procedural tiled terrain-like texture generator.  
+A simple procedural tiled terrain-like texture generator. Play with it online [here](https://thurinum.github.io/procedural-map-gen/]).
 
 ![Screenshot 2022-07-08 210958](https://user-images.githubusercontent.com/43908636/178086348-64a22b2f-f872-4b70-baba-485485134305.jpg)
 
