@@ -87,7 +87,7 @@ function engine_renderWorld(size) {
 	drawOverlay.width = quality * 32;
 	drawOverlay.height = quality * 32;
 
-	positionMultiplier = Math.round(drawOverlay.width / grid.offsetWidth) - 0.1; // todo remove magic number
+	positionMultiplier = Math.round(drawOverlay.width / grid.offsetWidth);
 
 	//Use perpective if enabled
 	if (usePerspective) {
