@@ -10,64 +10,82 @@
 
 <body>
 	<p id="loading">LOADING...</p>
-	
+
 	<video id="background" autoplay src="resources/video/background.mp4"></video>
 
 	<!-- MAP GRID -->
 	<div id="grid"></div>
-	<canvas width="4096" height="4096" id="canvas"></canvas>
+	<canvas id="canvas" width="4096" height="4096" id="canvas"></canvas>
 
 	<!-- USER FEATURES -->
 	<div id="userPanel">
 		<h3>Map Size</h3>
-		<input id="number" type="range" min="0" value="16" max="128" onchange="this.nextElementSibling.innerText = `${this.value}x${this.value} = ${Math.pow(this.value, 2)}`" />
+		<input id="number" type="range" min="1" value="16" max="128"
+			onchange="this.nextElementSibling.innerText = `${this.value}x${this.value} = ${Math.pow(this.value, 2)}`" />
 		<label>16x16 = 256</label>
 
-		<div style="display: none;">
-			<!-- temp hide unimplemented UI -->
-			<h3>Terrain Distribution</h3>
-			<label id="a1" for="a1">Land</label><input id="slider1" min="0" max="100" value="0" type="range"
-				name="a1" /><br /><br />
-			<label id="a2" for="a2">Water</label><input id="slider2" min="0" max="100" value="0" type="range"
-				name="a2" /><br /><br />
-			<label id="a3" for="a3">Coast T</label><input id="slider3" min="0" max="100" value="0" type="range"
-				name="a3" /><br /><br />
-			<label id="a4" for="a4">Coast B</label><input id="slider4" min="0" max="100" value="0" type="range"
-				name="a4" /><br /><br />
-			<label id="a5" for="a5">Coast L</label><input id="slider5" min="0" max="100" value="0" type="range"
-				name="a5" /><br /><br />
-			<label id="a6" for="a6">Coast R</label><input id="slider6" min="0" max="100" value="0" type="range"
-				name="a6" /><br /><br />
-			<label id="a7" for="a7">Coast TL1</label><input id="slider7" min="0" max="100" value="0" type="range"
-				name="a7" /><br /><br />
-			<label id="a8" for="a8">Coast TL2</label><input id="slider8" min="0" max="100" value="0" type="range"
-				name="a8" /><br /><br />
-			<label id="a9" for="a9">Coast TR1</label><input id="slider9" min="0" max="100" value="0" type="range"
-				name="a9" /><br /><br />
-			<label id="a10" for="a10">Coast TR2</label><input id="slider10" min="0" max="100" value="0"
-				type="range" name="a10" /><br /><br />
-			<label id="a11" for="a11">Coast BL1</label><input id="slider11" min="0" max="100" value="0"
-				type="range" name="a11" /><br /><br />
-			<label id="a12" for="a12">Coast BL2</label><input id="slider12" min="0" max="100" value="0"
-				type="range" name="a12" /><br /><br />
-			<label id="a13" for="a13">Coast BR1</label><input id="slider13" min="0" max="100" value="0"
-				type="range" name="a13" /><br /><br />
-			<label id="a14" for="a14">Coast BR2</label><input id="slider14" min="0" max="100" value="0"
-				type="range" name="a14" /><br /><br />
-			<label id="a15" for="a15">Coast D1</label><input id="slider15" min="0" max="100" value="0"
-				type="range" name="a15" /><br /><br />
-			<label id="a16" for="a16">Coast D2</label><input id="slider16" min="0" max="100" value="0"
-				type="range" name="a16" /><br /><br />
-			<label id="a17" for="a17">Coast D11</label><input id="slider17" min="0" max="100" value="0"
-				type="range" name="a17" /><br /><br />
-			<label id="a18" for="a18">Coast D21</label><input id="slider18" min="0" max="100" value="0"
-				type="range" name="a18" /><br /><br />
-		</div>
+		<!-- <h3>Terrain Distribution</h3>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" />
+			Land</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" />
+			Water</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(top)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(bottom)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(left)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(right)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(top left 1)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(top left 2)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(top right 1)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(top right 2)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(bottom left 1)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(bottom left 2)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(bottom right 1)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(bottom right 2)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(diagonal 1)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(diagonal 2)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(diagonal 11)</label>
+		<label>
+			<input class="probability-slider" type="number" min="0" max="100" value="5.55" step=".01" /> Coast
+			(diagonal 21)</label>
+
+		<p id="probabilities-validation"></p> -->
 
 		<h3>Canvas Resolution</h3>
 		<label for="quality" class="sliderWrapper">
 			Low
-			<input id="quality" min="1" max="64" value="64" type="range" />
+			<input id="quality" min="1" max="64" value="64" type="number" />
 			High
 		</label>
 
@@ -82,6 +100,11 @@
 			Use floating animation
 		</label>
 
+		<label for="useHighQualityDownload">
+			<input id="useHighQualityDownload" type="checkbox" checked="true" />
+			Use high-quality download
+		</label>
+
 		<hr />
 
 		<!-- <div class="btnGroup">
@@ -89,11 +112,13 @@
 			<button id="save">Save Map</button>
 		</div> -->
 	</div>
-	
+
 	<div id="menubtns-wrapper">
 		<button id="generator">Generate Map</button>
 		<button id="menu-toggle"></button>
 	</div>
+
+	<button id="download-btn">⤓</button>
 
 	<!-- VERSION NUMBER -->
 	<p id="version">Version unavailable</p>

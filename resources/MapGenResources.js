@@ -6,112 +6,130 @@ const tiles = {
 		bottom: ["land", "coastT", "coastTL1", "coastTR1"],
 		left: ["coastR", "coastTR1", "coastBR1", "land"],
 		right: ["land", "coastL", "coastTL1", "coastBL1"],
+		probability: 5.55
 	},
 	water: {
 		top: ["water", "coastT", "coastBL2", "coastBR2"],
 		bottom: ["water", "coastB", "coastTR2", "coastTL2"],
 		left: ["water", "coastL", "coastTR2", "coastBR2"],
 		right: ["water", "coastR", "coastTL2", "coastBL2"],
+		probability: 5.55
 	},
 	coastT: {
 		top: ["land", "coastB", "coastBL1", "coastBR1"],
 		bottom: ["water", "coastB", "coastTL2", "coastTR2"],
 		left: ["coastT", "coastTL1", "coastBL2", "coastD2", "coastD11"],
 		right: ["coastT", "coastTR1", "coastBR2", "coastD1", "coastD21"],
+		probability: 5.55
 	},
 	coastB: {
 		top: ["water", "coastT", "coastBL2", "coastBR2"],
 		bottom: ["land", "coastT", "coastTL1", "coastTR1"],
 		left: ["coastB", "coastTL2", "coastBL1", "coastD1", "coastD21"],
 		right: ["coastB", "coastTR2", "coastBR1", "coastD2", "coastD11"],
+		probability: 5.55
 	},
 	coastL: {
 		top: ["coastL", "coastTL1", "coastTR2", "coastD2", "coastD11"],
 		bottom: ["coastL", "coastBL1", "coastBR2", "coastD1", "coastD21"],
 		left: ["coastR", "coastTR1", "coastBR1", "land"],
 		right: ["water", "coastR", "coastTL2", "coastBL2"],
+		probability: 5.55
 	},
 	coastR: {
 		top: ["coastR", "coastTL2", "coastTR1", "coastD1", "coastD21"],
 		bottom: ["coastR", "coastBL2", "coastBR1", "coastD2", "coastD11"],
 		left: ["water", "coastL", "coastTR2", "coastBR2"],
 		right: ["land", "coastL", "coastTL1", "coastBL1"],
+		probability: 5.55
 	},
 	coastTL1: {
 		top: ["land", "coastB", "coastBL1", "coastBR1"],
 		bottom: ["coastL", "coastBL1", "coastBR2", "coastD1", "coastD21"],
 		left: ["land", "coastR", "coastTR1", "coastBR1"],
 		right: ["coastT", "coastTR1", "coastBR2", "coastD1", "coastD21"],
+		probability: 5.55
 	},
 	coastTL2: {
 		top: ["water", "coastT", "coastBL2", "coastBR2"],
 		bottom: ["coastR", "coastBL2", "coastBR1", "coastD2", "coastD11"],
 		left: ["water", "coastL", "coastTR2", "coastBR2"],
 		right: ["coastB", "coastTR2", "coastBR1", "coastD2", "coastD11"],
+		probability: 5.55
 	},
 	coastTR1: {
 		top: ["land", "coastB", "coastBL1", "coastBR1"],
 		bottom: ["coastR", "coastBL2", "coastBR1", "coastD2", "coastD11"],
 		left: ["coastT", "coastTL1", "coastBL2", "coastD2", "coastD11"],
 		right: ["land", "coastL", "coastTL1", "coastBL1"],
+		probability: 5.55
 	},
 	coastTR2: {
 		top: ["coastT", "water", "coastBL2", "coastBR2"],
 		bottom: ["coastL", "coastBL1", "coastBR2", "coastD1", "coastD21"],
 		left: ["coastB", "coastTL2", "coastBL1", "coastD1", "coastD21"],
 		right: ["water", "coastR", "coastTL2", "coastBL2"],
+		probability: 5.55
 	},
 	coastBL1: {
 		top: ["coastL", "coastTL1", "coastTR2", "coastD2", "coastD11"],
 		bottom: ["land", "coastT", "coastTL1", "coastTR1"],
 		left: ["land", "coastR", "coastTR1", "coastBR1"],
 		right: ["coastB", "coastTR2", "coastBR1", "coastD2", "coastD11"],
+		probability: 5.55
 	},
 	coastBL2: {
 		top: ["coastR", "coastTL2", "coastTR1", "coastD1", "coastD21"],
 		bottom: ["water", "coastB", "coastTL2", "coastTR2"],
 		left: ["water", "coastL", "coastTR2", "coastBR2"],
 		right: ["coastT", "coastTR1", "coastBR2", "coastD1", "coastD21"],
+		probability: 5.55
 	},
 	coastBR1: {
 		top: ["coastR", "coastTL2", "coastTR1", "coastD1", "coastD21"],
 		bottom: ["land", "coastT", "coastTL1", "coastTR1"],
 		left: ["coastB", "coastTL2", "coastBL1", "coastD1", "coastD21"],
 		right: ["land", "coastL", "coastTL1", "coastBL1"],
+		probability: 5.55
 	},
 	coastBR2: {
 		top: ["coastL", "coastTL1", "coastTR2", "coastD2", "coastD11"],
 		bottom: ["water", "coastB", "coastTL2", "coastTR2"],
 		left: ["coastT", "coastTL1", "coastBL2", "coastD2", "coastD11"],
 		right: ["water", "coastR", "coastTL2", "coastBL2"],
+		probability: 5.55
 	},
 	coastD2: {
 		top: ["coastR", "coastTL2", "coastTR1", "coastD1", "coastD21"],
 		bottom: ["coastL", "coastBL1", "coastBR2", "coastD1", "coastD21"],
 		left: ["coastB", "coastTL2", "coastBL1", "coastD1", "coastD21"],
 		right: ["coastT", "coastTR1", "coastBR2", "coastD1", "coastD21"],
+		probability: 5.55
 	},
 	coastD1: {
 		top: ["coastL", "coastTL1", "coastTR2", "coastD2", "coastD11"],
 		bottom: ["coastR", "coastBL2", "coastBR1", "coastD2", "coastD11"],
 		left: ["coastT", "coastTL1", "coastBL2", "coastD2", "coastD11"],
 		right: ["coastB", "coastTR2", "coastBR1", "coastD2", "coastD11"],
+		probability: 5.55
 	},
 	coastD11: {
 		top: ["coastR", "coastTL2", "coastTR1", "coastD1", "coastD21"],
 		bottom: ["coastL", "coastBL1", "coastBR2", "coastD1", "coastD21"],
 		left: ["coastB", "coastTL2", "coastBL1", "coastD1", "coastD21"],
 		right: ["coastT", "coastTR1", "coastBR2", "coastD1", "coastD21"],
+		probability: 5.55
 	},
 	coastD21: {
 		top: ["coastL", "coastTL1", "coastTR2", "coastD2", "coastD11"],
 		bottom: ["coastR", "coastBL2", "coastBR1", "coastD2", "coastD11"],
 		left: ["coastT", "coastTL1", "coastBL2", "coastD2", "coastD11"],
 		right: ["coastB", "coastTR2", "coastBR1", "coastD2", "coastD11"],
+		probability: 5.55
 	},
 }
 
-var probabilities = [
+var probabilitiesSet = [
 	[5.55, "land"],
 	[5.55, "water"],
 	[5.55, "coastT"],
